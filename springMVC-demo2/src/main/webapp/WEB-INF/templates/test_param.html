@@ -10,5 +10,11 @@ Conratulations!!!!! this pagge is test param!
 <a th:href="@{testQAQ(username='fujang',password=123456)}">testQAQ</a><br>
 
 <a th:href="@{testQAQ2(username='fujang',pass_word=123456)}">testQAQ2</a><br>
+
+<form th:action="@{testPOJO}" method = "post">
+    name:<input type="text" name="username"><br>
+    password:<input type="password" name="password"><br>
+    <input type="submit" value="submit">
+</form>
 </body>
 </html>

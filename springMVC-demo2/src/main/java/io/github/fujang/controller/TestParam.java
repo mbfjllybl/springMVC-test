@@ -1,6 +1,9 @@
 package io.github.fujang.controller;
 
+import io.github.fujang.bean.Person;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -17,8 +20,18 @@ public class TestParam {
     }
 
     @RequestMapping("/testQAQ2")
-    public String test2(String username, @RequestParam("pass_word") String password) {
-        System.out.println(username + " " + password);
+    public String test2(String username, @RequestParam("pass_word") String password, @RequestHeader("host") String host, @CookieValue("JSESSIONID") String cookie) {
+        System.out.println(username + " " + password + "!!");
+        System.out.println(host);
+        System.out.println(cookie);
         return "test";
     }
+
+    @RequestMapping("/testPOJO")
+    public String test3(Person person) {
+        System.out.println(person);
+        return "test";
+    }
+
+
 }
