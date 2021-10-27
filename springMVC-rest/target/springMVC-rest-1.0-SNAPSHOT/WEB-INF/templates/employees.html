@@ -16,7 +16,7 @@
         <th>lastname</th>
         <th>email</th>
         <th>gender</th>
-        <th>option</th>
+        <th>option(<a th:href="@{/toAdd}">add</a> )</th>
     </tr>
     <tr>
     <tr th:each="employee : ${employees}">
@@ -26,7 +26,7 @@
         <td th:text="${employee.gender}"></td>
         <td>
             <a @click="deleteEmployee" th:href="@{'/employee/' + ${employee.id}}">delete</a>
-            <a href="">update</a>
+            <a th:href="@{'/employee/' + ${employee.id}}">update</a>
         </td>
     </tr>
     </tr>
