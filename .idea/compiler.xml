@@ -10,6 +10,7 @@
         <module name="springMVC-demo2" />
         <module name="springMVC-demo3" />
         <module name="springMVC-demo4" />
+        <module name="springMVC-rest" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -17,6 +18,8 @@
       <module name="springMVC-demo2" target="11" />
       <module name="springMVC-demo3" target="11" />
       <module name="springMVC-demo4" target="11" />
+      <module name="springMVC-rest" target="11" />
+      <module name="untitled" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
